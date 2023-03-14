@@ -1,0 +1,5 @@
+ASCII: h	Dec: 104	Oct: 150	Hex: 68
+ASCII: e	Dec: 101	Oct: 145	Hex: 65
+ASCII: l	Dec: 108	Oct: 154	Hex: 6c
+ASCII: l	Dec: 108	Oct: 154	Hex: 6c
+ASCII: o	Dec: 111	Oct: 157	Hex: 6f
