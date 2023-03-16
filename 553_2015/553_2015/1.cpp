@@ -16,7 +16,7 @@ double fac(int x) {
 	return res;
 }
 
-
+//按照题设来的但是结果误差非常大，找不出来bug
 double e(double x) {
 	double res = 1;
 	double temp2 = 1;

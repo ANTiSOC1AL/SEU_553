@@ -26,6 +26,7 @@ double cal(int x) {
 	do {
 		temp = pow(x, count) / fac(count);
 		res += temp;
+		cout << "temp = " << temp << endl;
 		count++;
 	} while (abs(temp) >= 1e-10);            //注意精确度的表示 10^x === 10ex
 
