@@ -9,15 +9,10 @@ using namespace std;
 
 class Polynomial {
 private:
-	int* factors;       //多项式每一项的系数
+	int* factors;       //多项式每一项的系数，用vector应该更方便些
 	int n;              //多项式的最高项次数
 
 public:
-	Polynomial() {                        //无参构造函数
-		this->n = 0;
-		this->factors = new int[this->n];
-		memset(this->factors, 0, n);
-	}
 	Polynomial(int n) {
 		this->n = n;
 		this->factors = new int[n];
@@ -34,7 +29,7 @@ public:
 
 	Polynomial(const Polynomial& p) {    //拷贝构造函数
 		this->n = p.n;
-		this->factors = new int[this->n];
+		this->factors = new int[this->n]; //深拷贝
 		for (int i = 0; i < this->n; i++) {
 			this->factors[i] = p.factors[i];
 		}

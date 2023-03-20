@@ -69,6 +69,7 @@ public:
 	}
 };
 
+//继承Vehicle又包含SteeringWheel与Brake
 class Car :public Vehicle {
 private:
 	string brand;     //汽车的品牌

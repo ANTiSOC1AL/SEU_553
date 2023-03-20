@@ -32,7 +32,7 @@ int main() {
 	ch = cin.get();
 	int sum = 0;
 
-	while (i <= count && ch != '\n') {
+	while (i <= count && ch != '\n') { //读入的数字小于规定数字且未换行（未输入结束）
 		if (ch == ',' || ch == '\n') {
 			ch = cin.get();
 			i++;
@@ -42,6 +42,7 @@ int main() {
 			nums.push_back(ch);
 			ch = cin.get();
 		}
+
 		//处理数字
 		int num = string2int(nums);
 		add(sum, num);

@@ -7,9 +7,22 @@
 #define MAX 50
 using namespace std;
 
-void display(char* str, const int start, const int end) {
-	for (int i = start; i < end; i++)
-		cout << str[i];
+//优化了一下，使用strtok()函数代替固定格式输出
+void display(ifstream& in) {
+	char* words;
+	char line[MAX] = { '\0' };
+	while (in.getline(line, MAX, '\n')) {
+		words = strtok(line, "()");
+		cout << words << " | ";
+		words = strtok(nullptr, "()");
+		cout << words << " | ";
+		words = strtok(nullptr, "|");
+		cout << words << " | ";
+		words = strtok(nullptr, "()");
+		cout << words << endl;
+	}
+
+	return;
 }
 
 int main() {
@@ -20,18 +33,6 @@ int main() {
 		exit(0);
 	}
 
-	char line[MAX] = { '\0' };
-	while (!in.eof()) {
-		in.getline(line, MAX, '\n');
-		display(line, 1, 4);
-		cout << " | ";
-		display(line, 6, 17);
-		cout << " | ";
-		display(line, 19, 22);
-		cout << " | ";
-		display(line, 24, 30);
-		cout << endl;
-	}
-
+	display(in);
 	return 0;
 }

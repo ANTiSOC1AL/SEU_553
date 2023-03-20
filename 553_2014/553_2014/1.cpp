@@ -53,7 +53,7 @@ int main() {
 		num1 = string2int(num);
 
 		//处理第二个数
-		num = strtok(nullptr, " ");
+		num = strtok(nullptr, "");
 		num2 = string2int(num);
 
 		cout << ack(num1, num2) << endl;

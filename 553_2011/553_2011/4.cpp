@@ -29,16 +29,14 @@ void SortOne(string &str) {
 //—°‘Ò≈≈–Ú
 void SortTwo(string &str) {
 	for (int i = 0; i < str.length(); i++) {
-		char min = str[i];
 		int pos = i;
 		for (int j = i; j < str.length(); j++) {
-			if (str[j] < min) {
-				min = str[j];
+			if (str[j] < str[pos]) {
 				pos = j;
 			}
 		}
 		char temp = str[i];
-		str[i] = min;
+		str[i] = str[pos];
 		str[pos] = temp;
 	}
 }
