@@ -8,9 +8,7 @@ private:
 	double height;   //高
 
 public:
-	ThreeDShape(double length, double width, double height):TwoDShape(length, width) { //显式地调用父类的构造函数
-		this->setLength(length);
-		this->setWidth(width);
+	ThreeDShape(double length, double width, double height):TwoDShape(length, width) { //初始化列表在此处不能使用了，得显式调用父类的构造函数
 		this->height = height;
 	}
 

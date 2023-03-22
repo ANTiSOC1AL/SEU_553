@@ -9,23 +9,14 @@ private:
 	double width;   //¿í
 
 public:
-	TwoDShape(double length, double width) {
-		this->length = length;
-		this->width = width;
-	}
+	TwoDShape(double length, double width) :length(length), width(width) {}
 
 	double getLength() {
 		return this->length;
 	}
-	void setLength(double length) {
-		this->length = length;
-	}
 
 	double getWidth() {
 		return this->width;
-	}
-	void setWidth(double width) {
-		this->width = width;
 	}
 
 	virtual double calculate() {
