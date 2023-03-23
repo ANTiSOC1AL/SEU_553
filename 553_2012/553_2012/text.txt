@@ -1,4 +1,0 @@
-Welcome to C++ world ! 
-Happy birthday to you .
-This is the weather report across the world for tomorrow , 
-talk about it in pairs following the model below .
